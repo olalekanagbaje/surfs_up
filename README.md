@@ -28,6 +28,10 @@ Following the statiscal analysis of the temperature data for June and December b
 
 _The 2 images highlighted below show a detailed view of the summary statistics that were calculated for the June & December records between 2010 and 2017;
 
+<img src="images/junestatistics.png">
+
+
+<img src="images/decemberstatistics.png">
 
 
 ## **Summary**
