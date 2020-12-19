@@ -44,17 +44,17 @@ Two (2) important queries that could help generate the statistical analysis of t
 
  _1. The first query will be used to generate all precipitation data for June & December for the period under review (2010 to 2017)_
  
-    _June_Precipitation_Result = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date)==6).all()_
-     print(June_Precipitation_Result)_
-    _December_Precipitation_Result = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date)==12).all()_
-     print(December_Precipitation_Result)_
+    _June_Precipitation_Result = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date)==6).all()
+     print(June_Precipitation_Result)
+    _December_Precipitation_Result = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date)==12).all()
+     print(December_Precipitation_Result)
 
  _2. The second query will be used to first convert the data generated in query 1 above to a dataframe and thereafter generate key statistical precipitation data for June & December, for the period under review (2010 to 2017)_
  
-    _June_Precipitation_Result_df = pd.DataFrame(June_Precipitation_Result, columns=['date','June Precipitation'])_
-    _June_Precipitation_Result_df.describe()_
+    _June_Precipitation_Result_df = pd.DataFrame(June_Precipitation_Result, columns=['date','June Precipitation'])
+    _June_Precipitation_Result_df.describe()
     
 
-    _December_Precipitation_Result_df = pd.DataFrame(December_Precipitation_Result, columns=['date','December Precipitation'])_
-    _December_Precipitation_Result_df.describe()_
+    _December_Precipitation_Result_df = pd.DataFrame(December_Precipitation_Result, columns=['date','December Precipitation'])
+    _December_Precipitation_Result_df.describe()
     
