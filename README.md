@@ -20,13 +20,13 @@ To generate these analysis, I utilized the following resources;
   
 Following the statiscal analysis of the temperature data for June and December between the period of 2010 and 2017, the following are the 3 key differences / major points that were observed from the June and December data / statistics ;
 
- _- Mean (Average) Temperature: From a total temperature data size of 1,700 records, the average temperature in June for the period analyzed(2010-2017) was 74.94 while that of December (over a total data size of 1,517 records) was 71.04. This shows a marginal difference of about 5.2% between June and December.
+ _- Mean (Average) Temperature: From a total temperature data size of 1,700 records, the average temperature in June for the period analyzed(2010-2017) was 74.94 while that of December (over a total data size of 1,517 records) was 71.04. This shows a marginal difference of about 5.2% between June and December._
  
-  _- Minimum / Maximum Temperature: The lowest temperature recorded over the period under review was 64 for June and 56 for December (12.5% difference). On the other hand, the highest temperature recorded were 85 and 83 for June and December respectively (2.4% difference). From these we can deduce the while the highest temperature records for both periods (June & December) are relatively close, the lowest temperature records for both periods are slightly far apart.    
+  _- Minimum / Maximum Temperature: The lowest temperature recorded over the period under review was 64 for June and 56 for December (12.5% difference). On the other hand, the highest temperature recorded were 85 and 83 for June and December respectively (2.4% difference). From these we can deduce the while the highest temperature records for both periods (June & December) are relatively close, the lowest temperature records for both periods are slightly far apart._    
   
-  _- Standard Deviation of the Temperature Dataset: The standard deviation of the June temperature data records was 3.257 while that of December was approximately 3.749. This effectively means that about 68% of the temperature records analyzed for June during the period under review, lie approximately between 71.68 and 78.20. In the same vein, for the December temperature records, we can also deduce that about 68% of the data lie approximatley between 67.29 and 74.79. 
+  _- Standard Deviation of the Temperature Dataset: The standard deviation of the June temperature data records was 3.257 while that of December was approximately 3.749. This effectively means that about 68% of the temperature records analyzed for June during the period under review, lie approximately between 71.68 and 78.20. In the same vein, for the December temperature records, we can also deduce that about 68% of the data lie approximatley between 67.29 and 74.79._ 
 
-_The 2 images highlighted below show a detailed view of the summary statistics that were calculated for the June & December records between 2010 and 2017;
+_The 2 images highlighted below show a detailed view of the summary statistics that were calculated for the June & December records between 2010 and 2017;_
 
 <img src="images/junestatistics.png">
 
@@ -42,19 +42,19 @@ However, I will also recommend that the statistical temperature data highlighted
 
 Two (2) important queries that could help generate the statistical analysis of the precipitation records for the period of June & December (2010 to 2017) are hihlighted below;
 
- _1. The first query will be used to generate all precipitation data for June & December for the period under review (2010 to 2017)
+ _1. The first query will be used to generate all precipitation data for June & December for the period under review (2010 to 2017)_
  
-    _June_Precipitation_Result = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date)==6).all()
-     print(June_Precipitation_Result)
-    _December_Precipitation_Result = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date)==12).all()
-     print(December_Precipitation_Result)
+    _June_Precipitation_Result = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date)==6).all()_
+     print(June_Precipitation_Result)_
+    _December_Precipitation_Result = session.query(Measurement.date, Measurement.prcp).filter(extract('month', Measurement.date)==12).all()_
+     print(December_Precipitation_Result)_
 
- _2. The second query will be used to first convert the data generated in query 1 above to a dataframe and thereafter generate key statistical precipitation data for June & December, for the period under review (2010 to 2017)
+ _2. The second query will be used to first convert the data generated in query 1 above to a dataframe and thereafter generate key statistical precipitation data for June & December, for the period under review (2010 to 2017)_
  
-    _June_Precipitation_Result_df = pd.DataFrame(June_Precipitation_Result, columns=['date','June Precipitation'])
-    _June_Precipitation_Result_df.describe()
+    _June_Precipitation_Result_df = pd.DataFrame(June_Precipitation_Result, columns=['date','June Precipitation'])_
+    _June_Precipitation_Result_df.describe()_
     
 
-    _December_Precipitation_Result_df = pd.DataFrame(December_Precipitation_Result, columns=['date','December Precipitation'])
-    _December_Precipitation_Result_df.describe()
+    _December_Precipitation_Result_df = pd.DataFrame(December_Precipitation_Result, columns=['date','December Precipitation'])_
+    _December_Precipitation_Result_df.describe()_
     
